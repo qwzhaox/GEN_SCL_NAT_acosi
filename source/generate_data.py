@@ -12,7 +12,8 @@ sentword2opinion = {'positive': 'great', 'negative': 'bad', 'neutral': 'ok'}
 laptop_parent_mapping = mappings['laptop_parent_mapping']
 laptop_full_mapping = mappings['laptop_full_mapping']
 rest_full_mapping = mappings['restaurant_full_mapping']
-
+shoes_parent_mapping = mappings['shoes_parent_mapping']
+shoes_full_mapping = mappings['shoes_full_mapping']
 
 laptop_dict = {}
 for elt in laptop_parent_mapping:
@@ -30,17 +31,26 @@ rest_full_dict = {}
 for elt in rest_full_mapping:
     rest_full_dict[elt[1]] = elt[0]
 
+shoes_parent_dict = {}
+for elt in shoes_parent_mapping:
+    shoes_parent_dict[elt[1]] = elt[0]
+
+shoes_full_dict = {}
+for elt in shoes_full_mapping:
+    shoes_full_dict[elt[1]] = elt[0]
 
 domain_map = {
     'restaurant': rest_full_dict,
     'laptop': laptop_full_dict,
-    'laptop_parent': laptop_parent_dict
+    'laptop_parent': laptop_parent_dict,
+    'shoes': shoes_full_dict
 }
 
 domain_map_inverted = {
     'restaurant': rest_full_mapping,
     'laptop': laptop_full_mapping,
-    'laptop_parent': laptop_parent_mapping
+    'laptop_parent': laptop_parent_mapping,
+    'shoes': shoes_full_mapping
 }
 
 def get_domain(label):

@@ -48,9 +48,9 @@ def init_args():
     parser = argparse.ArgumentParser()
     # basic settings
     parser.add_argument("--task", default='asqp', type=str, required=True,
-                        help="The name of the task, selected from: [asqp, tasd, aste]")
+                        help="The name of the task, selected from: [asqp, tasd, aste, acos, acosi]")
     parser.add_argument("--dataset", default='rest15', type=str, required=True,
-                        help="The name of the dataset, selected from: [rest15, rest16]")
+                        help="The name of the dataset, selected from: [acos_restaurant_data, acos_laptop_data, acosi_shoes_data]")
     parser.add_argument("--model_name_or_path", default='t5-base', type=str,
                         help="Path to pre-trained model or shortcut name")
     parser.add_argument("--do_train", action='store_true',
